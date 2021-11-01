@@ -222,7 +222,7 @@ class Pipeline:
         if isinstance(other, (Config, dict)):
             new_p.set_config(other)
             return new_p
-        raise TypeError("Pipeline might take only Dataset or Config. Use as pipeline << dataset or pipeine << config")
+        raise TypeError("Pipeline might take only Dataset or Config. Use as pipeline << dataset or pipeline << config")
 
     def _is_batch_method(self, name, namespace=Batch):
         if self._dataset is not None:
